@@ -13,5 +13,7 @@ public class TestExchange {
 		ExchangeService ex = (ExchangeService) ctx.getBean("xe");
 		ex.convert();
 		
+		ExchangeService ex2 = (ExchangeService) ctx.getBean("xe");
+		ex2.convert();
 	}
 }

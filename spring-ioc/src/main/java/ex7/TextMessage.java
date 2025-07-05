@@ -13,5 +13,4 @@ public class TextMessage implements Message {
 	public void send(String to, String msg) {
 		System.out.println("SMS sent to, " + to + " as: " + msg);
 	}
-
 }

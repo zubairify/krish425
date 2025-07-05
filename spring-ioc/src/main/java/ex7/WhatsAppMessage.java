@@ -1,8 +1,10 @@
 package ex7;
 
+import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Component;
 
 @Component("wap")
+@Lazy
 public class WhatsAppMessage implements Message {
 
 	public WhatsAppMessage() {
