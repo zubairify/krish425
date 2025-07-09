@@ -10,14 +10,14 @@ import com.fasterxml.jackson.databind.util.JSONPObject;
 @RestController
 public class ContentController {
 	// http://localhost:9000/text/Zubair
-	@GetMapping(value = "/text/{name}", produces = "text/plain")
-	public String greetText(@PathVariable String name) {
+	@GetMapping(value = "/text/{pname}", produces = "text/plain")
+	public String greetText(@PathVariable("pname") String name) {
 		return "Text: Welcome to Spring Boot, " + name;
 	}
 	
-	// http://localhost:8880/html?name=Shaikh
+	// http://localhost:8880/html?pname=Shaikh
 	@GetMapping(value = "/html", produces = "text/html")
-	public String greetHtml(@RequestParam String name) {
+	public String greetHtml(@RequestParam("pname") String name) {
 		return "<h1>HTML: Welcome to Spring Boot, "  + name + "</h1>";
 	}
 	
