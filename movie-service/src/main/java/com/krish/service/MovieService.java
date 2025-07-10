@@ -13,4 +13,10 @@ public interface MovieService {
 	List<Movie> findAll();
 	
 	boolean delete(int movId);
+	
+	Movie findByTitle(String title);
+	
+	List<Movie> findByGenre(String genre);
+	
+	List<Movie> findByRatingBetween(double min, double max);
 }
